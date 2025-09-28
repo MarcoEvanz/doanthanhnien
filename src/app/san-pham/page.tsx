@@ -193,7 +193,7 @@ export default function SanPham() {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {filteredProducts.map((product) => (
-                  <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                  <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow flex flex-col h-full">
                     <div className="h-48 bg-gray-200 flex items-center justify-center relative">
                       <Image
                         src={product.image}
@@ -207,9 +207,9 @@ export default function SanPham() {
                         </div>
                       )}
                     </div>
-                    <div className="p-4">
+                    <div className="p-4 flex flex-col flex-grow">
                       <div className="flex items-center mb-2">
-                        <span className="text-xs px-2 py-1 bg-blue-100 text-blue-600 rounded-full">
+                        <span className="text-xs px-2 py-1 bg-sky-100 text-sky-600 rounded-full">
                           {categories.find(c => c.id === product.category)?.name}
                         </span>
                         <span className={`ml-auto text-xs px-2 py-1 rounded-full ${
@@ -221,28 +221,30 @@ export default function SanPham() {
                         </span>
                       </div>
                       <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.name}</h3>
-                      <p className="text-gray-600 text-sm mb-3 line-clamp-2">{product.description}</p>
-                      <div className="text-sm text-gray-500 mb-3">
+                      <p className="text-gray-600 text-sm mb-3 line-clamp-2 flex-grow">{product.description}</p>
+                      <div className="text-sm text-gray-500 mb-4">
                         Nhà cung cấp: {product.supplier}
                       </div>
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <span className="text-blue-600 font-bold text-lg">
-                            {product.price.toLocaleString('vi-VN')}₫
-                          </span>
-                          <span className="text-gray-500 text-sm">/{product.unit}</span>
+                      <div className="mt-auto">
+                        <div className="flex items-center justify-between mb-3">
+                          <div>
+                            <span className="text-sky-600 font-bold text-lg">
+                              {product.price.toLocaleString('vi-VN')}₫
+                            </span>
+                            <span className="text-gray-500 text-sm">/{product.unit}</span>
+                          </div>
                         </div>
-                        <div className="flex gap-2">
+                        <div className="flex gap-2 w-full">
                           <Link 
                             href={`/san-pham/${product.id}`}
-                            className="px-3 py-1 text-sm border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition-colors"
+                            className="flex-1 px-3 py-2 text-sm text-center border border-sky-600 text-sky-600 rounded hover:bg-sky-50 transition-colors"
                           >
                             Chi tiết
                           </Link>
                           <button 
-                            className={`px-3 py-1 text-sm rounded transition-colors ${
+                            className={`flex-1 px-3 py-2 text-sm rounded transition-colors ${
                               product.inStock 
-                                ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                                ? 'bg-sky-500 text-white hover:bg-sky-600' 
                                 : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                             }`}
                             disabled={!product.inStock}
