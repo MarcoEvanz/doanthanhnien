@@ -3,26 +3,26 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-gray-800 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto px-2 sm:px-4 py-6 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* About */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Về chúng tôi</h3>
-            <p className="text-gray-300 text-sm mb-4">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Về chúng tôi</h3>
+            <p className="text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
               Website sản phẩm địa phương xã Thành phú, được quản lý bởi Đoàn Thanh niên xã với mục tiêu kết nối và quảng bá sản phẩm địa phương.
             </p>
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">TP</span>
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-xs sm:text-sm">TP</span>
               </div>
-              <span className="text-sm">Đoàn Thanh niên xã Thành phú</span>
+              <span className="text-xs sm:text-sm">Đoàn Thanh niên xã Thành phú</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Liên kết nhanh</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Liên kết nhanh</h3>
+            <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/gioi-thieu" className="text-gray-300 hover:text-white transition-colors">
                   Giới thiệu
@@ -48,8 +48,8 @@ export default function Footer() {
 
           {/* Product Categories */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Danh mục sản phẩm</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Danh mục sản phẩm</h3>
+            <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/san-pham?category=nong-san" className="text-gray-300 hover:text-white transition-colors">
                   Nông sản
@@ -74,18 +74,18 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Thông tin liên hệ</h3>
-            <div className="space-y-2 text-sm text-gray-300">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Thông tin liên hệ</h3>
+            <div className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-300">
               <p>📍 Xã Thành phú, Huyện ..., Tỉnh ...</p>
               <p>📞 Điện thoại: 0123.456.789</p>
               <p>✉️ Email: doanthanhnien@thanhphu.vn</p>
               <p>👤 Phụ trách: Võ Mạnh Lực</p>
             </div>
-            <div className="mt-4">
-              <h4 className="font-semibold mb-2">Kết nối với chúng tôi</h4>
-              <div className="flex space-x-2">
-                <button className="bg-blue-600 hover:bg-blue-700 p-2 rounded transition-colors">
+            <div className="mt-3 sm:mt-4">
+              <h4 className="font-semibold mb-2 text-sm sm:text-base">Kết nối với chúng tôi</h4>
+              <div className="flex flex-wrap gap-2">
+                <button className="bg-blue-600 hover:bg-blue-700 px-3 py-1 sm:p-2 rounded transition-colors text-xs sm:text-sm">
                   Facebook
                 </button>
                 <button className="bg-green-600 hover:bg-green-700 p-2 rounded transition-colors">
