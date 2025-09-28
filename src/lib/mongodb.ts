@@ -15,11 +15,9 @@ const globalForMongoose = globalThis as unknown as {
   mongoose: CachedConnection | undefined
 }
 
-let cached = globalForMongoose.mongoose ?? { conn: null, promise: null }
+const cached = globalForMongoose.mongoose ?? { conn: null, promise: null }
 
-if (!globalForMongoose.mongoose) {
-  globalForMongoose.mongoose = cached
-}
+globalForMongoose.mongoose ??= cached
 
 export async function connectToDatabase() {
   if (cached.conn) {

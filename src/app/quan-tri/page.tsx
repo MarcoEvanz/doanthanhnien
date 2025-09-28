@@ -174,7 +174,7 @@ export default function AdminPage() {
             <div className="flex items-center p-3 bg-blue-50 rounded-lg">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
               <div className="flex-1">
-                <p className="text-sm text-gray-900">Sản phẩm "Gạo ST25 cao cấp" đã được thêm vào hệ thống</p>
+                <p className="text-sm text-gray-900">Sản phẩm &ldquo;Gạo ST25 cao cấp&rdquo; đã được thêm vào hệ thống</p>
                 <p className="text-xs text-gray-500">2 giờ trước</p>
               </div>
             </div>
@@ -188,7 +188,7 @@ export default function AdminPage() {
             <div className="flex items-center p-3 bg-yellow-50 rounded-lg">
               <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3"></div>
               <div className="flex-1">
-                <p className="text-sm text-gray-900">Khách hàng mới "Nguyễn Văn A" đã đăng ký tài khoản</p>
+                <p className="text-sm text-gray-900">Khách hàng mới &ldquo;Nguyễn Văn A&rdquo; đã đăng ký tài khoản</p>
                 <p className="text-xs text-gray-500">1 ngày trước</p>
               </div>
             </div>
