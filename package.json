@@ -7,9 +7,12 @@
     "dev": "next dev --turbopack",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out",
-    "build": "next build --turbopack",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint"
+  },
+  "engines": {
+    "node": ">=18.17.0"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",

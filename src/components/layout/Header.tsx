@@ -142,7 +142,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/admin" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
+              <Link href="/quan-tri" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Quản trị
               </Link>
             </li>
