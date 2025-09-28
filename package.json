@@ -1,12 +1,9 @@
 {
-  "homepage": "https://MarcoEvanz.github.io/doanthanhnien",
   "name": "sanphamthanhphudt",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
