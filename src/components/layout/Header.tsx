@@ -13,9 +13,9 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-blue-600 text-white shadow-lg">
+    <header className="bg-sky-400 text-white shadow-lg">
       {/* Top bar */}
-      <div className="bg-blue-700 text-xs sm:text-sm">
+      <div className="bg-sky-500 text-xs sm:text-sm">
         <div className="container mx-auto px-2 sm:px-4 py-1 sm:py-2 flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-0">
           <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4">
             <span className="hidden xs:block">📞 0123.456.789</span>
@@ -33,11 +33,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
             <div className="w-8 h-8 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center">
-              <span className="text-blue-600 font-bold text-sm sm:text-xl">TP</span>
+              <span className="text-sky-500 font-bold text-sm sm:text-xl">TP</span>
             </div>
             <div className="min-w-0">
               <h1 className="text-sm sm:text-xl font-bold truncate">Sản phẩm Thành phú</h1>
-              <p className="text-blue-200 text-xs sm:text-sm truncate">Đoàn Thanh niên xã</p>
+              <p className="text-sky-100 text-xs sm:text-sm truncate">Đoàn Thanh niên xã</p>
             </div>
           </Link>
 
@@ -47,7 +47,7 @@ export default function Header() {
               <input
                 type="text"
                 placeholder="Tìm kiếm sản phẩm..."
-                className="w-full px-4 py-2 pr-10 rounded-lg text-gray-800 bg-white border-2 border-blue-200 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-400"
+                className="w-full px-4 py-2 pr-10 rounded-lg text-gray-800 bg-white border-2 border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-300 focus:border-sky-400"
               />
               <span className="absolute right-3 top-2.5 text-gray-400">🔍</span>
             </div>
@@ -55,7 +55,7 @@ export default function Header() {
 
           {/* Actions */}
           <div className="flex items-center space-x-1 sm:space-x-4">
-            <button className="relative p-1 sm:p-2 hover:bg-blue-500 rounded-lg transition-colors">
+            <button className="relative p-1 sm:p-2 hover:bg-sky-300 rounded-lg transition-colors">
               <span className="text-lg sm:text-xl">🛒</span>
               <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center">
                 0
@@ -89,14 +89,14 @@ export default function Header() {
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <Link 
                   href="/dang-nhap"
-                  className="px-2 py-1 text-xs sm:text-sm bg-white text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                  className="px-2 py-1 text-xs sm:text-sm bg-white text-sky-600 hover:bg-sky-50 rounded-lg transition-colors"
                 >
                   <span className="hidden sm:inline">Đăng nhập</span>
                   <span className="sm:hidden">👤</span>
                 </Link>
                 <Link 
                   href="/dang-ky"
-                  className="px-2 py-1 text-xs sm:text-sm bg-blue-500 hover:bg-blue-400 rounded-lg transition-colors"
+                  className="px-2 py-1 text-xs sm:text-sm bg-sky-300 hover:bg-sky-200 rounded-lg transition-colors"
                 >
                   <span className="hidden sm:inline">Đăng ký</span>
                   <span className="sm:hidden">✅</span>
@@ -106,7 +106,7 @@ export default function Header() {
             
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-1 sm:p-2 hover:bg-blue-500 rounded-lg transition-colors"
+              className="md:hidden p-1 sm:p-2 hover:bg-sky-300 rounded-lg transition-colors"
             >
               <span className="text-lg sm:text-xl">{isMenuOpen ? '✕' : '☰'}</span>
             </button>
@@ -117,32 +117,32 @@ export default function Header() {
         <nav className={`mt-4 ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
           <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-8">
             <li>
-              <Link href="/" className="block py-2 px-3 hover:bg-blue-500 rounded-lg transition-colors">
+              <Link href="/" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Trang chủ
               </Link>
             </li>
             <li>
-              <Link href="/gioi-thieu" className="block py-2 px-3 hover:bg-blue-500 rounded-lg transition-colors">
+              <Link href="/gioi-thieu" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Giới thiệu
               </Link>
             </li>
             <li>
-              <Link href="/san-pham" className="block py-2 px-3 hover:bg-blue-500 rounded-lg transition-colors">
+              <Link href="/san-pham" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Sản phẩm
               </Link>
             </li>
             <li>
-              <Link href="/tin-tuc" className="block py-2 px-3 hover:bg-blue-500 rounded-lg transition-colors">
+              <Link href="/tin-tuc" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Tin tức
               </Link>
             </li>
             <li>
-              <Link href="/lien-he" className="block py-2 px-3 hover:bg-blue-500 rounded-lg transition-colors">
+              <Link href="/lien-he" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Liên hệ
               </Link>
             </li>
             <li>
-              <Link href="/admin" className="block py-2 px-3 hover:bg-blue-500 rounded-lg transition-colors">
+              <Link href="/admin" className="block py-2 px-3 hover:bg-sky-300 rounded-lg transition-colors">
                 Quản trị
               </Link>
             </li>
@@ -155,7 +155,7 @@ export default function Header() {
             <input
               type="text"
               placeholder="Tìm kiếm sản phẩm..."
-              className="w-full px-3 py-2 pr-10 rounded-lg text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-blue-300 bg-white border border-blue-200"
+              className="w-full px-3 py-2 pr-10 rounded-lg text-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-sky-300 bg-white border border-sky-200"
             />
             <span className="absolute right-3 top-2.5 text-gray-400">🔍</span>
           </div>

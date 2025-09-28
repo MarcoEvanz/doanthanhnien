@@ -61,7 +61,7 @@ export default function RegisterPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white py-4 sm:py-12 px-2 sm:px-4 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 to-white py-4 sm:py-12 px-2 sm:px-4 lg:px-8">
       <div className="max-w-sm sm:max-w-md w-full space-y-6 sm:space-y-8">
         <div>
           <div className="mx-auto h-16 w-16 bg-blue-600 rounded-full flex items-center justify-center">

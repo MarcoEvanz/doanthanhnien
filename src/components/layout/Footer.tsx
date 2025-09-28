@@ -12,7 +12,7 @@ export default function Footer() {
               Website sản phẩm địa phương xã Thành phú, được quản lý bởi Đoàn Thanh niên xã với mục tiêu kết nối và quảng bá sản phẩm địa phương.
             </p>
             <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-sky-500 rounded-full flex items-center justify-center flex-shrink-0">
                 <span className="text-white font-bold text-xs sm:text-sm">TP</span>
               </div>
               <span className="text-xs sm:text-sm">Đoàn Thanh niên xã Thành phú</span>
@@ -85,7 +85,7 @@ export default function Footer() {
             <div className="mt-3 sm:mt-4">
               <h4 className="font-semibold mb-2 text-sm sm:text-base">Kết nối với chúng tôi</h4>
               <div className="flex flex-wrap gap-2">
-                <button className="bg-blue-600 hover:bg-blue-700 px-3 py-1 sm:p-2 rounded transition-colors text-xs sm:text-sm">
+                <button className="bg-sky-400 hover:bg-sky-500 px-3 py-1 sm:p-2 rounded transition-colors text-xs sm:text-sm">
                   Facebook
                 </button>
                 <button className="bg-green-600 hover:bg-green-700 p-2 rounded transition-colors">

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 const categories = [
   { id: 'all', name: 'Tất cả', icon: '🌟' },
@@ -18,7 +20,7 @@ const products = [
     category: 'nong-san',
     price: 150000,
     unit: 'kg',
-    image: '/placeholder-product.jpg',
+    image: '/images/products/nong-san/gaothomdacsan.png',
     description: 'Gạo thơm sạch từ ruộng lúa địa phương, hạt dẻo thơm',
     inStock: true,
     supplier: 'Hợp tác xã Thành phú',
@@ -29,7 +31,7 @@ const products = [
     category: 'nong-san',
     price: 50000,
     unit: 'kg',
-    image: '/placeholder-product.jpg',
+    image: '/images/products/nong-san/rausachhuuco.png',
     description: 'Rau xanh sạch không hóa chất, tươi ngon mỗi ngày',
     inStock: true,
     supplier: 'Nhóm nông dân trẻ',
@@ -40,7 +42,7 @@ const products = [
     category: 'thu-cong',
     price: 200000,
     unit: 'cái',
-    image: '/placeholder-product.jpg',
+    image: '/images/products/thu-cong-my-nghe/thungtredantay.png',
     description: 'Sản phẩm thủ công từ tre nứa, đan tay tỉ mỉ',
     inStock: true,
     supplier: 'Xưởng thủ công Thanh Nga',
@@ -51,7 +53,7 @@ const products = [
     category: 'dac-san',
     price: 80000,
     unit: 'kg',
-    image: '/placeholder-product.jpg',
+    image: '/images/products/dac-san/banhtrangnuong.png',
     description: 'Bánh tráng truyền thống làm thủ công, thơm ngon',
     inStock: true,
     supplier: 'Cơ sở Minh Hạnh',
@@ -62,9 +64,9 @@ const products = [
     category: 'dac-san',
     price: 300000,
     unit: 'lít',
-    image: '/placeholder-product.jpg',
+    image: '/images/products/dac-san/matongnguyenchat.png',
     description: 'Mật ong rừng nguyên chất, bổ dưỡng cao',
-    inStock: false,
+    inStock: true,
     supplier: 'Trại ong Minh Đức',
   },
   {
@@ -73,7 +75,7 @@ const products = [
     category: 'dich-vu',
     price: 150000,
     unit: 'người',
-    image: '/placeholder-product.jpg',
+    image: '/images/products/dich-vu/tourthamquannongtrai.png',
     description: 'Trải nghiệm cuộc sống nông thôn, tham quan vườn rau',
     inStock: true,
     supplier: 'Nông trại sinh thái Xanh',
@@ -193,7 +195,12 @@ export default function SanPham() {
                 {filteredProducts.map((product) => (
                   <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
                     <div className="h-48 bg-gray-200 flex items-center justify-center relative">
-                      <span className="text-gray-500">Hình ảnh sản phẩm</span>
+                      <Image
+                        src={product.image}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                      />
                       {!product.inStock && (
                         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                           <span className="text-white font-semibold">Hết hàng</span>

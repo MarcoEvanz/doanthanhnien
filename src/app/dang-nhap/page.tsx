@@ -31,10 +31,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-white py-4 sm:py-12 px-2 sm:px-4 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-50 to-white py-4 sm:py-12 px-2 sm:px-4 lg:px-8">
       <div className="max-w-sm sm:max-w-md w-full space-y-6 sm:space-y-8">
         <div>
-          <div className="mx-auto h-12 w-12 sm:h-16 sm:w-16 bg-blue-600 rounded-full flex items-center justify-center">
+          <div className="mx-auto h-12 w-12 sm:h-16 sm:w-16 bg-sky-400 rounded-full flex items-center justify-center">
             <span className="text-white text-lg sm:text-2xl font-bold">TP</span>
           </div>
           <h2 className="mt-4 sm:mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900">
@@ -42,7 +42,7 @@ export default function LoginPage() {
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Hoặc{' '}
-            <Link href="/dang-ky" className="font-medium text-blue-600 hover:text-blue-500">
+            <Link href="/dang-ky" className="font-medium text-sky-600 hover:text-sky-500">
               tạo tài khoản mới
             </Link>
           </p>
@@ -68,7 +68,7 @@ export default function LoginPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 appearance-none relative block w-full px-3 py-2.5 sm:py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 text-sm sm:text-sm"
+                className="mt-1 appearance-none relative block w-full px-3 py-2.5 sm:py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10 text-sm sm:text-sm"
                 placeholder="Nhập email của bạn"
               />
             </div>
@@ -85,7 +85,7 @@ export default function LoginPage() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 appearance-none relative block w-full px-3 py-2.5 sm:py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 text-sm sm:text-sm"
+                className="mt-1 appearance-none relative block w-full px-3 py-2.5 sm:py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none focus:ring-sky-500 focus:border-sky-500 focus:z-10 text-sm sm:text-sm"
                 placeholder="Nhập mật khẩu"
               />
             </div>
@@ -95,7 +95,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-3 sm:py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="group relative w-full flex justify-center py-3 sm:py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? 'Đang đăng nhập...' : 'Đăng nhập'}
             </button>
@@ -104,7 +104,7 @@ export default function LoginPage() {
           <div className="text-center">
             <p className="text-sm text-gray-600">
               Quên mật khẩu?{' '}
-              <Link href="#" className="font-medium text-blue-600 hover:text-blue-500">
+              <Link href="#" className="font-medium text-sky-600 hover:text-sky-500">
                 Khôi phục tại đây
               </Link>
             </p>
