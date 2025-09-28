@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d out",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
